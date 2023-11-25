@@ -50,8 +50,19 @@ int createMatriz(int (*matriz)[10], int,int,int);
 void printMatriz(int (*matriz)[10], int lenI, int lenJ);
 int fatorialRecursivo(int);
 int fibonacciRecursivo(int, int, int);
+
+struct ALUNO
+	{
+		int ra;
+		char nome[30];
+		char curso[20];
+	};
+typedef struct ALUNO aluno;
+
 int main()
 {
+	aluno aluno1;
+	aluno1.ra = 123456;
 	int opcao = 0;
 	int exitOption = 22;
 	int numFatorial = 0;
@@ -91,6 +102,8 @@ int main()
     int isPalindrono = 1;
     int k = strlen(palavra2);
 
+	
+	
     int opcaoMatriz = 0;
     int matriz[10][10];
     int matriz2[10][10];
@@ -650,8 +663,8 @@ int createMatriz(int (*matriz)[10], int pos, int lenI, int lenJ){
     return iMatriz, jMatriz;
 }
 void printMatriz(int (*matriz)[10], int lenI, int lenJ){
-    for(int i = 0; i < lenI; i++){
-        for(int j = 0; j < lenJ; j++){
+    for(int i = 0; i < 10; i++){
+        for(int j = 0; j < 10; j++){
             printf("%i ",matriz[i][j]);
             
         }
@@ -670,7 +683,7 @@ int fibonacciRecursivo(int termo, int num, int num2){
 		printf("%i", num2);
 		return 1;
 	}
-	num2 == 1 ? printf("%i ", num) : printf("");
+	num2 == 1 ? printf("%i ", num) : printf(" ");
 	printf("%i ", num2);
 	fibonacciRecursivo(termo - 1, num2, num + num2);
 
