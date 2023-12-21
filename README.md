@@ -1,1 +1,2 @@
-# C_Exercises
+# Exercicios em C e Python
+
